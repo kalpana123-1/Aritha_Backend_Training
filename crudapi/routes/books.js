@@ -14,4 +14,20 @@ router.get('/', async(req, res)=>{
     }
 })
 
+router.post('/', async(req, res){
+    const book = new Book({
+        book_name : req.body.book_name,
+        author_name: req.body.author_name,
+        year_of_publish: req.body.year_of_publish,
+        no_of_publish : req.body.no_of_publish,
+        visit : req.body.visit
+    })
+
+    try{
+        const b = await book.save();
+        res.json(b);
+    }
+
+})
+
 module.exports = router;
