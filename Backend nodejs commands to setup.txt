@@ -8,7 +8,4 @@ for running application : nodemon run start / nodemon app.js
 
 
 
-assetName, outletName, assetType, zoneName
 
-api/v1/assetDetails
-GET

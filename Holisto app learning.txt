@@ -1,0 +1,12 @@
+1. data to be displayed --- assetName, outletName, assetType, zoneName
+
+   SQL query - select a.name as assetName, o.name as outletName, ac.type as assetType, z.name as zoneName from asset a
+               left join outlet o on a.outletId = o.id
+               left join assetClass ac on a.outletId = ac.id
+               left join zone z on a. outletId = z.id
+
+   API link --------------- api/v1/assetDetails
+   API request type ------- GET
+
+
+2. 
